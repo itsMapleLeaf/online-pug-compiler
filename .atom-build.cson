@@ -1,0 +1,3 @@
+name: 'dev server'
+cmd: 'browser-sync'
+args: ['start', '--server', '.', '--files', '*.html, *.css, *.js']

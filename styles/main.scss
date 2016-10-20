@@ -1,0 +1,81 @@
+$primary-color: #333;
+$secondary-color: darken($primary-color, 5%);
+$text-color: #bbb;
+$link-color: #eee;
+
+@mixin flex-container ($direction: column) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin full-screen {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+}
+
+@mixin editor-block {
+  background: $secondary-color;
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin: 0.5em;
+  padding: 0.5em 0.6em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font: 13pt Roboto, Helvetica, sans-serif;
+  color: $text-color;
+}
+
+body {
+  background-color: $primary-color;
+
+  @include flex-container;
+  @include full-screen;
+}
+
+pre {
+  font-family: 'Roboto Mono', monospace;
+  font-size: inherit;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: lighter;
+}
+
+header, footer {
+  padding: 1em;
+}
+
+main {
+  /* extend the untaken space in the middle */
+  flex-grow: 1;
+
+  /* horizontal grid */
+  @include flex-container(row);
+  padding: 0 0.5em;
+}
+
+#editor, #output {
+  @include editor-block;
+}
+
+.CodeMirror {
+  height: 100%;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.cm-s-base16-dark.CodeMirror {
+  background: transparent;
+}

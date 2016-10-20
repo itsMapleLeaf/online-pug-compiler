@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="lib/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="lib/codemirror/codemirror.css">
+  <link rel="stylesheet" href="lib/codemirror/base16-dark.css">
+  <link rel="stylesheet" href="styles/main.min.css">
+  <title>Pug Compiler</title>
+</head>
+
+<body>
+  <header>
+    <h1>Pug Compiler</h1>
+    <small><em>Write some pug, watch the output!</em></small>
+  </header>
+  <main>
+    <pre id='editor'></pre>
+    <pre id='output'></pre>
+  </main>
+  <footer>
+    <i class='mdi mdi-code-tags'></i> with <i class='mdi mdi-heart'></i>
+    by <a href='https://github.com/just-nobody' target="_blank">
+      a nobody
+    </a>
+  </footer>
+</body>
+
+<script src='lib/pug.js'></script>
+<script src='lib/codemirror/codemirror.js'></script>
+<script src='lib/codemirror/pug.js'></script>
+<script src='main.js'></script>
