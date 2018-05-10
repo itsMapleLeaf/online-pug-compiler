@@ -19,7 +19,7 @@ editor.on('change', () => {
 editor.setValue(`doctype html
 html(lang="en")
   head
-    title= pageTitle
+    title Live Pug Compiler
     script(type='text/javascript').
       if (foo) bar(1 + 5)
   body
